@@ -9,14 +9,19 @@ After you've finished the [Prepatory steps](preparation) and reviewed the [Intro
 ## Embedding a screenshot (in the assets/img/ folder)
 1. Easy way with built-in markdown code (if image is already the right size): 
 ```![screenshot of jay's desktop](assets/img/screenshot-example.png)```  
-results in:  
+
+results in:   
+
 ![screenshot of jay's desktop](assets/img/screenshot-example.png)
 
 
-2. With html (controlling for size)
-```<img src="assets/img/assets/img/screenshot-example.png" alt="Freeze a row in Google Sheets" width="400" style="border: 1px solid darkgrey">```
+2. With html (controlling for size)  
+
+```<img src="assets/img/screenshot-example.png" alt="Freeze a row in Google Sheets" width="400" style="border: 1px solid darkgrey">```  
+
 results in:  
-<img src="assets/img/assets/img/screenshot-example.png" alt="Freeze a row in Google Sheets" width="400" style="border: 1px solid darkgrey">
+
+<img src="assets/img/screenshot-example.png" alt="Freeze a row in Google Sheets" width="400" style="border: 1px solid darkgrey">
 
 
 
