@@ -4,6 +4,8 @@ title: Cleanup with OpenRefine
 nav_order: 4
 ---
 
+# Cleanup with OpenRefine
+
 After you've finished the [Prepatory steps](preparation) and reviewed the [Introductory material](introduction), open OpenRefine... 
 
 ## Embedding a screenshot (in the assets/img/ folder)
