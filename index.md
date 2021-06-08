@@ -1,9 +1,13 @@
 ---
 layout: home
 title: Home
-description: SCDS Do More with Digital Scholarship workshop series
+description: ARL DSI 2021 Workshop
 nav_order: 1
 ---
+
+# Welcome to Getting started with text preparation and analysis: 
+## A hands-on overview of tools and approaches.
+
 
 <!-- Edit the content below for the workshop in question. Once you're ready to publish, remove the comment characters e.g. "<!--" at the start and end -->
 
