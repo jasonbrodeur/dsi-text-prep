@@ -17,13 +17,13 @@ By the end of this module, you will be able to:
 
 |Activity|Time Allotted|Key Topics / Activities|
 |:--|:--|:--|
-|**Pre-workshop activities** (Self-guided)|1 hour (completed before workshop)|Install OpenRefine <br> Introduction to OpenRefine <br> Introduction to Python and Jupyter Notebooks|
+|**Pre-workshop activities** <br>(Self-guided)|1 hour (completed before workshop)|Install OpenRefine <br> Introduction to OpenRefine <br> Introduction to Python and Jupyter Notebooks|
 |**Introductory lecture + discussion**|15 minutes|Introduction to text preparation and analysis <br> - Why prepare your text? <br> - Overview of concepts and methods <br> - Key considerations for different source materials and analyses|
-|**OpenRefine Part 1** (hands-on)|20 minutes|Introduction to OpenRefine <br> Manual cleanup (e.g. find and replace) <br> Faceting|
+|**OpenRefine Part 1** <br>(hands-on)|20 minutes|Introduction to OpenRefine <br> Manual cleanup (e.g. find and replace) <br> Faceting|
 |**Break**|10 minutes|**Break**|
-|**OpenRefine Part 1** (hands-on)|20 minutes|Stemming and clustering <br> GREL/regular expressions|
-|**Programming & Python** (lecture + hands-on) |20 minutes|Overview of programmatic approaches <br> The 'what' and 'when' to program <br> Using Python for text preparation|
-|**Final Thoughts** (lecture + discussion)|10 minutes|Final thoughts & key considerations <br> Where to learn more |
+|**OpenRefine Part 1** <br>(hands-on)|20 minutes|Stemming and clustering <br> GREL/regular expressions|
+|**Programming & Python** <br>(lecture + hands-on) |20 minutes|Overview of programmatic approaches <br> The 'what' and 'when' to program <br> Using Python for text preparation|
+|**Final Thoughts** <br>(lecture + discussion)|10 minutes|Final thoughts & key considerations <br> Where to learn more |
 
 Head to the [Preparation page](preparation) page to get started with your pre-workshop activities.
 
