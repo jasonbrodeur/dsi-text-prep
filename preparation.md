@@ -9,13 +9,11 @@ nav_order: 3
 **Preparation instructions available July 9!**
 
 ## OpenRefine
+For this workshop, you will need [OpenRefine](https://openrefine.org/) and a web browser. Follow the [instructions](https://librarycarpentry.org/lc-open-refine/setup.html) provided by the Library Carpentry to install OpenRefine on your system (whether it is Windows, Mac, or Linux).
+Once you have installed OpenRefine, please complete **modules 1-4** of the [Library Carpentry OpenRefine lesson](https://librarycarpentry.org/lc-open-refine/)
 
 ## Jupyter Notebooks & Python
-<!--
-For this workshop, you will need [OpenRefine](https://openrefine.org/) and a web browser. Follow the [instructions](https://datacarpentry.org/openrefine-socialsci/setup.html) provided by the Data Carpentries to install OpenRefine on your system (whether it is Window, Mac, or Linux). 
 
-
--->
 When you have completed the pre-workshop tasks, proceed to the [introductory presentation](introduction) to explore the key concepts. 
 
 <!--
