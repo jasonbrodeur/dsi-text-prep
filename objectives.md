@@ -14,6 +14,7 @@ By the end of this module, you will be able to:
 * Apply prepared computational techniques to perform common text preparation steps and basic analyses.
 
 ## Schedule
+
 |Activity|Time Allotted|Key Topics / Activities|
 |:---|:---|:---|
 |**Pre-workshop activities** (Self-guided)|1 hour (completed before workshop)|Install OpenRefine <br> Introduction to OpenRefine <br> Introduction to Python and Jupyter Notebooks|
