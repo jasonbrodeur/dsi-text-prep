@@ -1,13 +1,18 @@
 ---
 layout: default
 title: Cleanup with OpenRefine
-nav_order: 4
+nav_order: 5
 ---
 
 # Cleanup with OpenRefine
 
-After you've finished the [Prepatory steps](preparation) and reviewed the [Introductory material](introduction), open OpenRefine... 
+**Coming soon!**
 
+<!--
+After you've finished the [Preparatory steps](preparation) and reviewed the [Introductory material](introduction), open OpenRefine... 
+-->
+
+<!--
 ## Embedding a screenshot (in the assets/img/ folder)
 1. Easy way with built-in markdown code (if image is already the right size): 
 ```![screenshot of jay's desktop](assets/img/screenshot-example.png)```  
@@ -25,9 +30,7 @@ results in:
 
 <img src="assets/img/screenshot-example.png" alt="Freeze a row in Google Sheets" width="400" style="border: 1px solid darkgrey">
 
-
-
-<!-- Edit the content below for the workshop in question. Once you're ready to publish, remove the comment characters e.g. "<!--" at the start and end -->
+-->
 
 <!--
 

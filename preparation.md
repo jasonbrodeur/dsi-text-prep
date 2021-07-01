@@ -1,17 +1,22 @@
 ---
 layout: default
 title: Preparation
-nav_order: 2
+nav_order: 3
 ---
 
 # Preparation
 
+**Preparation instructions available July 9!**
+
+## OpenRefine
+
+## Jupyter Notebooks & Python
+<!--
 For this workshop, you will need [OpenRefine](https://openrefine.org/) and a web browser. Follow the [instructions](https://datacarpentry.org/openrefine-socialsci/setup.html) provided by the Data Carpentries to install OpenRefine on your system (whether it is Window, Mac, or Linux). 
 
-When you have OpenRefine installed and working, proceed to the [introductory presentation](introduction page) to explore the key concepts. 
 
-<!-- Edit the content below for the workshop in question. Once you're ready to publish, remove the comment characters e.g. "<!--" at the start and end -->
-
+-->
+When you have completed the pre-workshop tasks, proceed to the [introductory presentation](introduction page) to explore the key concepts. 
 
 <!--
 

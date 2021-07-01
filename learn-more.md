@@ -1,10 +1,12 @@
 ---
 layout: default
 title: Learn More
-nav_order: 6
+nav_order: 7
 ---
 
 # Learn More
+
+**Coming soon!**
 
 <!-- Edit the content below for the workshop in question. Once you're ready to publish, remove the comment characters e.g. "<!--" at the start and end -->
 

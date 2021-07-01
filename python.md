@@ -1,11 +1,12 @@
 ---
 layout: default
 title: Programmatic Approaches
-nav_order: 5
+nav_order: 6
 ---
 
 # Programmatic Approaches with Python
 
+** Coming Soon!**
 <!-- Edit the content below for the workshop in question. Once you're ready to publish, remove the comment characters e.g. "<!--" at the start and end -->
 
 <!--
