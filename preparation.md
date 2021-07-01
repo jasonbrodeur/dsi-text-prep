@@ -16,7 +16,7 @@ For this workshop, you will need [OpenRefine](https://openrefine.org/) and a web
 
 
 -->
-When you have completed the pre-workshop tasks, proceed to the [introductory presentation](introduction page) to explore the key concepts. 
+When you have completed the pre-workshop tasks, proceed to the [introductory presentation](introduction) to explore the key concepts. 
 
 <!--
 
