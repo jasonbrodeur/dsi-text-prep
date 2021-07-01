@@ -5,14 +5,20 @@ nav_order: 3
 ---
 
 # Preparation
-
-**Preparation instructions available July 9!**
+Preparation for this workshop will take about 60 to 90 minutes, depending on your experience with the tools used during this session.  
+**To get the most of the workshop**, it is ***very important*** that you complete the OpenRefine and Jupyter Notebook setup, and at least work through some of the introductory modules. 
 
 ## OpenRefine
 For this workshop, you will need [OpenRefine](https://openrefine.org/) and a web browser. Follow the [instructions](https://librarycarpentry.org/lc-open-refine/setup.html) provided by the Library Carpentry to install OpenRefine on your system (whether it is Windows, Mac, or Linux).
 Once you have installed OpenRefine, please complete **modules 1-4** of the [Library Carpentry OpenRefine lesson](https://librarycarpentry.org/lc-open-refine/)
 
 ## Jupyter Notebooks & Python
+For our exploration of programmatic approaches to text analysis with Python, we'll be using [Jupyter Notebook](https://jupyter.org/), and the very excellent [Constellate](https://constellate.org/) tutorials. To ensure that you have the base knowledge required for success in this workshop, it is: 
+- *Required* that you complete the [Getting Started with Jupyter Notebooks](https://ithaka.github.io/tdm-notebooks/getting-started-with-jupyter.html) lesson, 
+- *strongly recommended* that you work through the [Python Basics 1](https://ithaka.github.io/tdm-notebooks/python-basics-1.html) lesson. 
+
+---
+
 
 When you have completed the pre-workshop tasks, proceed to the [introductory presentation](introduction) to explore the key concepts. 
 
