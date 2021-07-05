@@ -17,7 +17,7 @@ By the end of this module, you will be able to:
 
 |Activity|Time Allotted|Key Topics / Activities|
 |:--|:--|:--|
-|**Pre-workshop activities** <br>(Self-guided)|1 hour (completed before workshop)|Install OpenRefine <br> Introduction to OpenRefine <br> Introduction to Python and Jupyter Notebooks|
+|**Pre-workshop activities** <br>(Self-guided)|60 - 90 minutes (completed before workshop)|Install OpenRefine <br> Introduction to OpenRefine <br> Introduction to Python and Jupyter Notebooks|
 |**Introductory lecture + discussion**|15 minutes|Introduction to text preparation and analysis <br> - Why prepare your text? <br> - Overview of concepts and methods <br> - Key considerations for different source materials and analyses|
 |**OpenRefine Part 1** <br>(hands-on)|20 minutes|Introduction to OpenRefine <br> Manual cleanup (e.g. find and replace) <br> Faceting|
 |**Break**|10 minutes|**Break**|
