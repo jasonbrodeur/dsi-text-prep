@@ -11,6 +11,8 @@ Preparation for this workshop will take about 60 to 90 minutes, depending on you
 ## OpenRefine
 For this workshop, you will need [OpenRefine](https://openrefine.org/) and a web browser. Follow the [instructions](https://librarycarpentry.org/lc-open-refine/setup.html) provided by the Library Carpentry to install OpenRefine on your system (whether it is Windows, Mac, or Linux).
 - **NOTE**: When opening OpenRefine for the first time in a Mac, you may need to open your security preferences and permit OpenRefine to run.  
+
+
 Once you have installed OpenRefine, please complete **modules 1-4** of the [Library Carpentry OpenRefine lesson](https://librarycarpentry.org/lc-open-refine/)
 
 
