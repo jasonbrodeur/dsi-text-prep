@@ -28,6 +28,8 @@ To begin, open the project titled `SoR_metadata`.
 
 <img src="assets/img/SoR_openproject.png" alt="Open an existing OpenRefine Project" width="400" style="border: 1px solid darkgrey">
 
+![Open an existing OpenRefine Project](assets/img/SoR_openproject.png)
+
 First, let’s winnow our list down to only transcripts that have been reviewed. Click the down arrow in the column “transcript status” and select `Facet-->Text facet`.
 
 ```<img src="assets/img/SoR_metadata_reviewedfacet.png" alt="Create a text facet for the transcript status" column width="400" style="border: 1px solid darkgrey">```
