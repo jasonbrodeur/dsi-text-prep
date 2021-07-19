@@ -10,12 +10,25 @@ Preparation for this workshop will take about 60 to 90 minutes, depending on you
 
 ## OpenRefine
 For this workshop, you will need [OpenRefine](https://openrefine.org/) and a web browser. Follow the [instructions](https://librarycarpentry.org/lc-open-refine/setup.html) provided by the Library Carpentry to install OpenRefine on your system (whether it is Windows, Mac, or Linux).
-- **NOTE**: When opening OpenRefine for the first time in a Mac, you may need to open your security preferences and permit OpenRefine to run.  
+- **NOTE**: When opening OpenRefine for the first time in a Mac, you may need to open your security preferences and permit OpenRefine to run. See [Apple Support's Open a Mac app from an unidentified developer](https://support.apple.com/guide/mac-help/open-a-mac-app-from-an-unidentified-developer-mh40616/mac)
 
 
-Once you have installed OpenRefine, please complete **modules 1-4** of the [Library Carpentry OpenRefine lesson](https://librarycarpentry.org/lc-open-refine/)
+Once you have installed OpenRefine, please complete **modules 1-4** of the [Library Carpentry OpenRefine lesson](https://librarycarpentry.org/lc-open-refine/) to familiarize yourself with basic OpenRefine operations.
 
+To save time during the workshop, please create the demonstration projects ahead of time.
 
+Data: 
+* [Soul of Reason metadata](assets/files/SoR_metadata.csv)
+* Soul of Reason transcript
+	* Note that you can import multiple text files into a single OpenRefine project; make sure to check “Store file source” when creating the project so that you can retain from which file data originates.
+* OCR text file of “Some Comments on Correggio in Connection with His Pictures in Dresden” by Bernard Berenson
+	* article downloadable from [JSTOR](https://www.jstor.org/stable/25515893) 
+
+If you prefer, you may also open pre-made OpenRefine projects provided at the links below:
+
+* Soul of Reason metadata OpenRefine project (SoR_metadata)
+* Soul of Reason transcript OpenRefine project (RG_9_8_184_01-draft-en-txt)
+* OCR text file of “Some Comments on Correggio in Connection with His Pictures in Dresden” by Bernard Berenson OpenRefine project (25515893-txt)
 
 ## Jupyter Notebooks & Python
 For our exploration of programmatic approaches to text analysis with Python, we'll be using [Jupyter Notebook](https://jupyter.org/), and the very excellent [Constellate](https://constellate.org/) tutorials. To ensure that you have the base knowledge required for success in this workshop, it is: 
