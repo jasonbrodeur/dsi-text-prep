@@ -26,33 +26,34 @@ On OpenRefine’s main page, switch to the `Open Project tab` (assuming you have
 
 To begin, open the project titled `SoR_metadata`.
 
-<img src="assets/img/SoR_openproject.png" alt="Open an existing OpenRefine Project" width="400" style="border: 1px solid darkgrey">
 
 ![Open an existing OpenRefine Project](assets/img/SoR_openproject.png)
 
 First, let’s winnow our list down to only transcripts that have been reviewed. Click the down arrow in the column “transcript status” and select `Facet-->Text facet`.
 
-```<img src="assets/img/SoR_metadata_reviewedfacet.png" alt="Create a text facet for the transcript status" column width="400" style="border: 1px solid darkgrey">```
+![Create a text facet for the transcript status](assets/img/SoR_metadata_reviewedfacet.png)
 
 A facet pane will open in the left hand Facet/filter tab. Clicking on `Reviewed` filters the displayed rows down to only those 16 rows with this value in a cell.
 
-```<img src="assets/img/SoR_metadata_reviewedselected.png" alt="Facet with Reviewed selected" column width="400" style="border: 1px solid darkgrey">```
+![Facet with Reviewed selected](assets/img/SoR_metadata_reviewedselected.png)
 
-Make sure to clear your facet to get back to showing all rows.
+Make sure to clear your facet to get back to showing all rows:
 
-```<img src="assets/img/SoR_metadata_clearfacet.png" alt="Facet with red boxes around the controls for closing, removing, and refreshing facets" column width="150" style="border: 1px solid darkgrey">```
+![Facet with red boxes around the controls for closing, removing, and refreshing facets](assets/img/SoR_metadata_clearfacet.png)
 
 We could also narrow down episodes by date. First, let’s convert the date column to the date datatype. In the dropdown menu for the `date` column, let’s select `Edit cells-->Common transforms-->To date`.
 
-SCREENSHOT
+![Menu options for transforming cells to dates](SoR_metadata_todate.png)
 
-Again in the dropdown menu for the `date` column, let’s select `Facet-->Timeline facet`. We can now use the slider to select episodes that aired in a particular year (for example, `1975`).
+Notice that the color of date values is green in OpenRefine. Again in the dropdown menu for the `date` column, let’s select `Facet-->Timeline facet`. We can now use the slider to select episodes that aired in a particular year (for example, `1975`).
 
-SCREENSHOT
+![Menu options for a timeline facet](SoR_metadata_timelinefacet1.png)
+
+![Timeline facet](SoR_metadata_datefacet.png)
 
 Having narrowed our results, we can now export a spreadsheet of just this subset of rows using the `Export` dropdown menu on the top right.
 
-SCREENSHOT
+![Export menu in OpenRefine](SoR_metadata_export.png)
 
 Such a metadata file might be used by a script to select the text files that will be analyzed. For example, Nyla’s Soul of Reason Python script links a metadata CSV to the text files in order to process them.
 
@@ -74,18 +75,20 @@ Under the dropdown menu for `Column 1`:
 2. Give the new column the name `tokens`
 3. Click OK
 
-SCREENSHOT
+![Add column based on this column](RG_9_8_184_01_copydata1.png)
+![Add column based on this column configuration](RG_9_8_184_01_copydata2.png)
 
 Now, let’s move each word into its own cell. First, ensure you are in `records` mode.
 
-SCREENSHOT
+![OpenRefine's records mode](RG_9_8_184_01_recordsmode.png)
 
 Next, under the dropdown menu for `tokens`:
 1. Select `Edit cells → Split multi-valued cells`
 2. Delete the default separator (a comma) and replace it with a space.
 3. Click OK
 
-SCREENSHOT
+![Menu options for splitting cells](RG_9_8_184_01_splittokens.png)
+![Configuration for splitting cells](RG_9_8_184_01_splitseparator.png)
 
 #### Correcting text using facets
 Next, let’s take a look at our tokens using a facet. Our auto transcription service made a mistake in transcribing the introduction of the show, so let's take a look at that now.
