@@ -98,13 +98,9 @@ In Column 1, you’ll see the whole paragraph, which reads:
 
 >*On May 1 1970 a sensational new black magazine focusing on the black woman hit the newsstands of America. Now five years later the fifth anniversary issue of Essence magazine is on the stands and is being received in households throughout the nation. Here at Lewis publisher and Marcia Gillespie editor discuss five exciting years of Essence magazine on tonight soul of reason. This is Soul of reason a program that will examine the roots of the black box.*
 
-The last word in the final sentence should read **thought** instead of **box.** Hovering next to the word **box.** in the facet, click on `edit` and replace the word **box.** with the text **thought.** This is similar to a find and replace action in a text editor or Word. Note that we are only replacing this word in the tokens column, not in the text in Column 1.
+The last word in the final sentence should read **thought** instead of **box.** Hovering next to the word **box.** in the facet, click on `edit` and replace the word **box.** with the text **thought.** This is similar to a find and replace action in a text editor or Word. Note that we are only replacing this word in the `tokens` column, not in the text in `Column 1`.
 
-Proceed with caution! Back in your facet, you’ll see there is another value for **box** (this time without the period). Clicking on this value, we can see from looking at the original paragraph that the word **box** is correctly transcribed in this instance.
-
-SCREENSHOT
-
-For this text, a more standard find and replace might be easier to use.
+Proceed with caution! Back in your facet, you’ll see there is another value for **box** (this time without the period). Clicking on this value, we can see from looking at the original paragraph that the word **box** is correctly transcribed in this instance. For this text, a more standard find and replace might be easier to use.
 
 As another example, **WNBC** has been split with a space by the auto transcription service. To deal with this, we can make an edit to the **NBC** token and add a **W**. We can also go ahead and delete the standalone **W** token. This kind of correction would be part of your initial data analysis; as Jay pointed out earlier, what kind of clean up and correction of the text you do depends on how tolerant you are of error.
 
@@ -120,7 +116,7 @@ You may have noticed that OpenRefine treats words with different capitalization 
 To deal with capitalization, let’s use a common OpenRefine transformation to make all tokens lowercase. In the `tokens` dropdown menu, select `Edit cells → Common transforms → To lowercase`
 Notice that the number of options in the facet has decreased from **1275** to **1212**.
 
-SCREENSHOT
+![To lowercase transformation](assets/img/RG_9_8_184_01_tolowercase.png)
 
 We can also get rid of punctuation.
 
@@ -145,7 +141,7 @@ In the interest of demonstration, let’s use the undo/redo tab to walk back to 
 
 Walk all the way back to step 0. Make sure to select `rows` mode.
 
-SCREENSHOT
+![Undo/redo tab in OpenRefine](assets/img/RG_9_8_184_01_undo.png)
 
 Now, let’s use a regular expression to find the rows with timestamps in them and move them into their own column. Looking at the data, how would you describe this pattern?
 
@@ -155,12 +151,24 @@ Under the dropdown menu for `Column 1`, select Text filter:
 1. check the `regular expression` option
 2. Paste the regular expression into the box.
 
+![Menu options for text filter](assets/img/RG_9_8_184_01_textfilter.png)
+![Regex filtering rows](assets/img/RG_9_8_184_01_textfilterregex.png)
+
 Much like a facet, this filter has selected only the matching rows. Now, we can use the same `Edit column → Add column based on this column` action we did earlier to create our tokens column; this time, however, we’ll call the column “timestamp”.
 
-Back in our filter, let’s select `invert` to exclude the rows matching the regular expression. Now, we can create a tokens column the same way we did earlier in part one of today’s lesson: 
+Back in our filter, let’s select `invert` to exclude the rows matching the regular expression. 
+
+![Inverted text filter](assets/img/RG_9_8_184_01_textfilterinvert.png)
+
+Now, we can create a tokens column the same way we did earlier in part one of today’s lesson, but take some extra steps to exclude the timestamp from our tokens:
+
 1. `Edit column → Add column based on this column`
 2. Call the new column `tokens`
-3. `Edit cells → Split multi-valued cells` using a space.
+3. Uninvert the filter and remove or reset all facets/filters.
+4. Move the timestamp column to the beginning by selecting `Edit column → Move column to beginning`
+5. Move the tokens column left by selecting `Edit column → Move column left`
+6. Switch to `records` mode
+7. `Edit cells → Split multi-valued cells` using a space.
 
 Regular expressions such as the one we just used are extremely powerful. Nyla’s script, for example, used a regular expression to remove the timestamps before moving on to later steps of entity recognition.
 
@@ -168,24 +176,27 @@ Regular expressions such as the one we just used are extremely powerful. Nyla’
 ### Stemming and clustering to identify errors and analyze text
 For the last part of our OpenRefine session, we’ll explore stemming and clustering as both a way to detect errors in your source text and a form of analysis. For this demonstration, we’ll use some messy OCR data from an article by Bernard Berenson.
 
+Here is some text from the beginning of the article:
+>i _ IPS^S^ffclS OME comments on **correg ncRftJH GIO** IN CONNECTION with 1^58^^^ HIS PICTURES IN DRESDEN. Spl^^T^ES A few years ago, it would have been hard u|^J^^fev^S to tell whether Correggio's Night or E^^g^^M Raphael's Madonna Di San Sisto was the ^L^^^^^M favourite picture of the Dresden Gallery. mmSSSmS^mSSm The little sanctuary where the Virgin with Saint Sixtus floats above the pseudo-altar was then crowded with worshippers as it is now, and Correggio's picture had quite as large and devout a fol lowing. But some change in popular taste has evidently taken place, for few people now linger before the Night. What inference is to be drawn ? Was the enthusiasm for Correggio merely a fashion which has had its season ? He is certainly no longer admired as he was in the first few decades of this century, in the day when no gentleman could afford to be without his theory of the " Correggiosity of Correggio." The explanation is not far to seek. The enthusiasm for Correggio dates from the time when, all the possible variations having been played upon the themes introduced by Raphael and Michelangelo, the Caracci betook themselves to a comparatively unlaboured field, and founded upon Correggio their school of painting, and thus succeeded in lending a new life to Italian art. Most people, however, appreciate only what is of their own day, ana Correggio's in terpreters proved far more interesting to their contemporaries than the master himself. The Caracci, Domenichino, **Guer cino**, Guido Reni, and Lanfranco
+
+We see that some artist names are either separated by a space (*Guer cino*) or are a bit mangled (*correg ncRftJH GIO*). Clustering might help us identify some of these issues and correct them.
+
 Open the OpenRefine project `25515893 txt`:
 1. Create a `tokens` column the same way we’ve done before
 2. Open a text facet for the `tokens` column.
 	*Bonus question: do you see any values here we might find and delete using a regular expression?*
 3. In the facet, click `cluster`
 
-SCREENSHOT
+![Cluster button in a facet](assets/img/25515893_txt_cluster.png)
 
 OpenRefine’s clustering makes use of different algorithms to find values that might look different to a computer but are understood to be the same to a human. It does this by “tokenizing” the text in a more sophisticated way than we’ve been doing. While we’ve treated each “word” as a token, OpenRefine’s clustering options take various approaches to understanding chunks of strings, for example by taking a “bag” approach and scrambling the letters into alphabetical order, approaching a string phonetically, or using “nearest neighbor” methods.
 For more on what’s going on behind the scenes, the [OpenRefine user manual](https://docs.openrefine.org/manual/cellediting#cluster-and-edit) explains the different algorithms.
 
-In this case, we see that some artist names are either separated by a space (*Guer cino*) or are a bit mangled (*correg ncRftJH GIO*). Clustering might help us identify some of these issues and correct them.
-
 Nearest neighbor, levenstein, radius 5, block characters 6 yielded some interesting clusters. For example, it grouped some garbage OCR characters correctly with other instances of the word “Nativity”:
 
-SCREENSHOT
+![Clustering results showing clustering for the word Nativity](assets/img/25515893_txt_nativity.png)
 
-We could use this information to either harmonize the tokens, or to find the spot in the text in Column 1 I would like to correct.
+We could use this information to either harmonize the tokens, or to find the spot in the text in `Column 1` we would like to correct.
 
 Now that we’ve experienced some principles of text cleanup and analysis visually with OpenRefine, in the final part of today’s workshop, we’ll look at how similar actions can be taken using Python.
 
