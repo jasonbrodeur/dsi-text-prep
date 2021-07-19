@@ -43,17 +43,17 @@ Make sure to clear your facet to get back to showing all rows:
 
 We could also narrow down episodes by date. First, let’s convert the date column to the date datatype. In the dropdown menu for the `date` column, let’s select `Edit cells-->Common transforms-->To date`.
 
-![Menu options for transforming cells to dates](SoR_metadata_todate.png)
+![Menu options for transforming cells to dates](assets/img/SoR_metadata_todate.png)
 
 Notice that the color of date values is green in OpenRefine. Again in the dropdown menu for the `date` column, let’s select `Facet-->Timeline facet`. We can now use the slider to select episodes that aired in a particular year (for example, `1975`).
 
-![Menu options for a timeline facet](SoR_metadata_timelinefacet1.png)
+![Menu options for a timeline facet](assets/img/SoR_metadata_timelinefacet1.png)
 
-![Timeline facet](SoR_metadata_datefacet.png)
+![Timeline facet](assets/img/SoR_metadata_datefacet.png)
 
 Having narrowed our results, we can now export a spreadsheet of just this subset of rows using the `Export` dropdown menu on the top right.
 
-![Export menu in OpenRefine](SoR_metadata_export.png)
+![Export menu in OpenRefine](assets/img/SoR_metadata_export.png)
 
 Such a metadata file might be used by a script to select the text files that will be analyzed. For example, Nyla’s Soul of Reason Python script links a metadata CSV to the text files in order to process them.
 
@@ -75,20 +75,20 @@ Under the dropdown menu for `Column 1`:
 2. Give the new column the name `tokens`
 3. Click OK
 
-![Add column based on this column](RG_9_8_184_01_copydata1.png)
-![Add column based on this column configuration](RG_9_8_184_01_copydata2.png)
+![Add column based on this column](assets/img/RG_9_8_184_01_copydata1.png)
+![Add column based on this column configuration](assets/img/RG_9_8_184_01_copydata2.png)
 
 Now, let’s move each word into its own cell. First, ensure you are in `records` mode.
 
-![OpenRefine's records mode](RG_9_8_184_01_recordsmode.png)
+![OpenRefine's records mode](assets/img/RG_9_8_184_01_recordsmode.png)
 
 Next, under the dropdown menu for `tokens`:
 1. Select `Edit cells → Split multi-valued cells`
 2. Delete the default separator (a comma) and replace it with a space.
 3. Click OK
 
-![Menu options for splitting cells](RG_9_8_184_01_splittokens.png)
-![Configuration for splitting cells](RG_9_8_184_01_splitseparator.png)
+![Menu options for splitting cells](assets/img/RG_9_8_184_01_splittokens.png)
+![Configuration for splitting cells](assets/img/RG_9_8_184_01_splitseparator.png)
 
 #### Correcting text using facets
 Next, let’s take a look at our tokens using a facet. Our auto transcription service made a mistake in transcribing the introduction of the show, so let's take a look at that now.
