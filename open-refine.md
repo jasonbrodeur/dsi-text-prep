@@ -18,8 +18,96 @@ In Fall 2020, the Soul of Reason project team worked with NYU data science gradu
 
 In the OpenRefine portion of today’s workshop, we’ll use OpenRefine to get a visual sense of some of the kinds of data transformations that happen during text prep and analysis.
 
-### Facets
+### Selecting texts using metadata and facets
 
+You may need to select only a subset of texts for analysis. One way to do this is to use a metadata file to make your selections. For example, maybe you are only interested in texts with authors, or texts published in a certain date range.
+
+On OpenRefine’s main page, switch to the Open Project tab (assuming you have already created the project ahead of time...if you haven’t yet, head over to the [Preparation](preparation) to find out how!)
+
+To begin, open the project titled SoR_metadata.
+
+SCREENSHOT
+
+First, let’s winnow our list down to only transcripts that have been reviewed. Click the down arrow in the column header “transcript status” and select Facet-->Text facet.
+
+SCREENSHOT
+
+A facet pane will open in the left hand Facet/filter tab. Clicking on “Reviewed” filters the displayed rows down to only those with this value in a cell.
+
+SCREENSHOT
+
+We could also narrow down episodes by date. First, let’s convert the date column to the date datatype. In the dropdown menu for the “date” column, let’s select Edit cells-->Common transforms-->To date
+
+SCREENSHOT
+
+Again in the dropdown menu for the “date” column, let’s select Facet-->Timeline facet. We can now use the slider to select episodes that aired in a particular year (for example, 1975).
+
+SCREENSHOT
+
+Having narrowed our results, we can now export a spreadsheet of just this subset of rows using the Export dropdown menu on the top right.
+
+SCREENSHOT
+
+Such a metadata file might be used by a script to select the text files that will be analyzed. For example, Nyla’s Soul of Reason Python script links a metadata CSV to the text files in order to process them.
+
+### Manual clean-up using facets
+
+Next, let’s talk about manual clean up (for example, of OCR text). Programs like OpenRefine or even Word can be helpful at this stage for actions like find and replace or harmonizing spelling. We’ll also talk about some common actions involved in analyzing text (such as tokenizing or harmonizing capitalization/case). Alternately, for a small corpus, you might correct the text line by line manually.
+
+We’ll now open our next OpenRefine project, “RG_9_8_184_01.draft.en”. This is a Soul of Reason transcript of Dr. Roscoe Brown’s interview with Ed Lewis and Marcia Gillespie (Publisher and Editor of Essence Magazine). These next steps are based on an [in-development module from the Sherman Centre for Digital Scholarship]  (https://scds.github.io/text-analysis-1/) at McMaster University.
+
+Text analysis often involves “tokenizing” your text in some way -- in other words, breaking up the strings into smaller units. Today, we’ll split up sentences into individual words by splitting the contents of each speaker section on the space character.
+*Note: if you are not planning to do any editing of tokens in OpenRefine, you can use the Word Facet to take a look at all tokens in a column.*
+First, let’s copy our data into a new column. At this stage, I also want to note that anything we do today within OpenRefine will not change the underlying text file, so don’t worry about making a mess!
+
+Under the dropdown menu for “Column 1”, select Edit column → Add column based on this column…
+Give the new column the name “tokens”
+Click OK
+
+SCREENSHOT
+
+Now, let’s move each word into its own cell. First, ensure you are in records mode.
+
+SCREENSHOT
+
+Next, under the dropdown menu for “tokens”, select Edit cells → Split multi-valued cells. Delete the default separator (a comma) and replace it with a space.
+Click OK
+
+SCREENSHOT
+
+Next, let’s take a look at our tokens using a facet.
+I happen to know that our auto transcription service made a mistake in transcribing the introduction of the show, so I’d like to show you that now.
+
+Scroll down in the facet to find the word “box.” with a period. Click once on the word to select the record containing this token.
+In Column 1, you’ll see the whole paragraph, which reads:
+
+>On May 1 1970 a sensational new black magazine focusing on the black woman hit the newsstands of America. Now five years later the fifth anniversary issue of Essence magazine is on the stands and is being received in households throughout the nation. Here at Lewis publisher and Marcia Gillespie editor discuss five exciting years of Essence magazine on tonight soul of reason. This is Soul of reason a program that will examine the roots of the black box.
+
+I know that the last word in the final sentence should read **“thought”** instead of **“box”**. Hovering next to the word “box.” in the facet, click on “edit” and replace the word “box.” with the text “thought.” This is similar to a find and replace action in a text editor or Word. Note that we are only replacing this word in the tokens column, not in the copy of the text in Column 1.
+One must be careful, however! Back in your facet, you’ll see there is another value for “box” (this time without the period). Clicking on this value, we can see from looking at the original paragraph that the word “box” is correctly transcribed in this instance. For this text, a more standard find and replace might be easier to use.
+As another example, I noticed that WNBC has been split with a space by the auto transcription service. To deal with this, I can make an edit to the “NBC” token and add a “W”. I can also go ahead and delete the standalone “W” token.
+This kind of correction would be part of your initial data analysis; as Jay pointed out earlier, what kind of clean up and correction of the text you do depends on how tolerant you are of error.
+After making these kinds of corrections, your next step might be to reconstitute the text. You can do this by joining multi-valued cells and separating them with a space (basically, the opposite of what you did when you split cells!)
+Let’s move into some lightweight analysis. 
+Looking at the values in the facet, what do you notice?
+presence of timestamps
+we’ll see how to deal with these in the next section
+same word with different capitalization or punctuation being counted separately
+You may have noticed that OpenRefine treats words with different capitalization or punctuation as different tokens. Let’s use a common OpenRefine transformation to make all tokens lowercase.
+In the “tokens” dropdown menu, select Edit cells → Common transforms → To lowercase
+Notice that the number of options in the facet has decreased from 1275 to 1212.
+We can also get rid of punctuation.
+Select Edit cells → Transform
+Replace the text “value” with the following expression: value.chomp(".") and click “OK”
+Notice now that the number of options in the facet has decreased from 1212 to 1100!
+Note: If you are editing/cleaning a text in order to reconstitute it, you would likely want to retain nuance such as capitalization.
+
+
+## Part II
+
+### GREL and regular expressions to exclude content
+
+### Stemming and clustering to identify errors and analyze text
 
 <!--
 After you've finished the [Preparatory steps](preparation) and reviewed the [Introductory material](introduction), open OpenRefine... 
