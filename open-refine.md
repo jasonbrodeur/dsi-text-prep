@@ -26,15 +26,19 @@ On OpenRefine’s main page, switch to the `Open Project tab` (assuming you have
 
 To begin, open the project titled `SoR_metadata`.
 
-SCREENSHOT
+```<img src="assets/img/SoR_openproject.png" alt="Open an existing OpenRefine Project" width="400" style="border: 1px solid darkgrey">```
 
 First, let’s winnow our list down to only transcripts that have been reviewed. Click the down arrow in the column “transcript status” and select `Facet-->Text facet`.
 
-SCREENSHOT
+```<img src="assets/img/SoR_metadata_reviewedfacet.png" alt="Create a text facet for the transcript status" column width="400" style="border: 1px solid darkgrey">```
 
-A facet pane will open in the left hand Facet/filter tab. Clicking on `Reviewed` filters the displayed rows down to only those with this value in a cell.
+A facet pane will open in the left hand Facet/filter tab. Clicking on `Reviewed` filters the displayed rows down to only those 16 rows with this value in a cell.
 
-SCREENSHOT
+```<img src="assets/img/SoR_metadata_reviewedselected.png" alt="Facet with Reviewed selected" column width="400" style="border: 1px solid darkgrey">```
+
+Make sure to clear your facet to get back to showing all rows.
+
+```<img src="assets/img/SoR_metadata_clearfacet.png" alt="Facet with red boxes around the controls for closing, removing, and refreshing facets" column width="150" style="border: 1px solid darkgrey">```
 
 We could also narrow down episodes by date. First, let’s convert the date column to the date datatype. In the dropdown menu for the `date` column, let’s select `Edit cells-->Common transforms-->To date`.
 
@@ -64,8 +68,8 @@ Text analysis often involves “tokenizing” your text in some way -- in other 
 First, let’s copy our data into a new column. At this stage, I also want to note that anything we do today within OpenRefine will not change the underlying text file, so don’t worry about making a mess!
 
 Under the dropdown menu for `Column 1`:
-1. Select Edit column → Add column based on this column…
-2. Give the new column the name “tokens”
+1. Select `Edit column → Add column based on this column…`
+2. Give the new column the name `tokens`
 3. Click OK
 
 SCREENSHOT
@@ -75,7 +79,7 @@ Now, let’s move each word into its own cell. First, ensure you are in `records
 SCREENSHOT
 
 Next, under the dropdown menu for `tokens`:
-1. Select Edit cells → Split multi-valued cells
+1. Select `Edit cells → Split multi-valued cells`
 2. Delete the default separator (a comma) and replace it with a space.
 3. Click OK
 
