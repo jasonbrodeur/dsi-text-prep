@@ -26,7 +26,7 @@ On OpenRefine’s main page, switch to the `Open Project tab` (assuming you have
 
 To begin, open the project titled `SoR_metadata`.
 
-`<img src="assets/img/SoR_openproject.png" alt="Open an existing OpenRefine Project" width="400" style="border: 1px solid darkgrey">`
+<img src="assets/img/SoR_openproject.png" alt="Open an existing OpenRefine Project" width="400" style="border: 1px solid darkgrey">
 
 First, let’s winnow our list down to only transcripts that have been reviewed. Click the down arrow in the column “transcript status” and select `Facet-->Text facet`.
 
