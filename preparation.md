@@ -17,18 +17,55 @@ Once you have installed OpenRefine, please complete **modules 1-4** of the [Libr
 
 To save time during the workshop, please create the demonstration projects ahead of time.
 
-Data: 
-* [Soul of Reason metadata](assets/files/SoR_metadata.csv)
-* Soul of Reason transcript
-	* Note that you can import multiple text files into a single OpenRefine project; make sure to check “Store file source” when creating the project so that you can retain from which file data originates.
-* OCR text file of “Some Comments on Correggio in Connection with His Pictures in Dresden” by Bernard Berenson
-	* article downloadable from [JSTOR](https://www.jstor.org/stable/25515893) 
+### Project 1: Soul of Reason metadata
+1. Download the [Soul of Reason metadata](assets/files/SoR_metadata.csv)
+2. On the OpenRefine home screen, select the `Create Project` tab, upload the CSV, and click "Next"
+3. On the preview screen, ensure that:
+	* `Character encoding` is set to UTF-8
+	* `Columns are separated by` is set to comma
+	* `Trim leading & trailing whitespace...` is checked
+	* `Parse next 1 line(s) as column headers` is checked
+	* `Use character " to enclose cells...` is checked
+	* `Store blank rows` is checked
+	* `Store blank cells as nulls` is checked
+4. Click `Create Project`
+
+![Configuration for creating the metadata project](assets/img/SoR_metadata_create.png)
+
+### Project 2: Soul of Reason transcript
+1. Download the [Soul of Reason transcript](assets/files/RG_9_8_184_01.draft.en.txt)
+2. On the OpenRefine home screen, select the `Create Project` tab, upload the txt file, and click "Next"
+3. On the preview screen, ensure that:
+	* `Parse data as` is set to Line-based text files
+	* `Character encoding` is set to UTF-8
+	* `Store blank rows` is *unchecked*
+	* `Store blank cells as nulls` is checked
+	* *Note that you can import multiple text files into a single OpenRefine project; make sure to check “Store file source” when creating the project so that you can retain from which file data originates.*
+4. Click `Create Project`
+
+![Configuration for creating the transcript text project](assets/img/OpenRefine_SoR_create.png)
+
+### Project 3: OCR text file
+1. Download the [OCR text file](assets/files/25515893.txt) of “Some Comments on Correggio in Connection with His Pictures in Dresden” by Bernard Berenson. *Article downloadable from [JSTOR](https://www.jstor.org/stable/25515893)*
+2. On the OpenRefine home screen, select the `Create Project` tab, upload the txt file, and click "Next"
+3. On the preview screen, ensure that:
+	* `Parse data as` is set to Line-based text files
+	* `Character encoding` is set to UTF-8
+	* `Store blank rows` is *unchecked*
+	* `Store blank cells as nulls` is checked
+4. Click `Create Project`
+
+![Configuration for creating the OCR text project](assets/img/25515893_txt_create.png)
 
 If you prefer, you may also open pre-made OpenRefine projects provided at the links below:
 
-* Soul of Reason metadata OpenRefine project (SoR_metadata)
-* Soul of Reason transcript OpenRefine project (RG_9_8_184_01-draft-en-txt)
-* OCR text file of “Some Comments on Correggio in Connection with His Pictures in Dresden” by Bernard Berenson OpenRefine project (25515893-txt)
+* Soul of Reason metadata OpenRefine project ([SoR_metadata](assets/files/SoR_metadata.openrefine.tar.gz))
+* Soul of Reason transcript OpenRefine project ([RG_9_8_184_01-draft-en-txt](assets/files/RG_9_8_184_01-draft-en-txt.openrefine.tar.gz))
+* OCR text file of “Some Comments on Correggio in Connection with His Pictures in Dresden” by Bernard Berenson OpenRefine project ([25515893-txt](assets/files/25515893-txt.openrefine.tar.gz))
+
+Download the tar.gz files and load them in the `Import` tab on OpenRefine's home screen:
+
+![OpenRefine import tab](assets/img/OpenRefine_import.png)
 
 ## Jupyter Notebooks & Python
 For our exploration of programmatic approaches to text analysis with Python, we'll be using [Jupyter Notebook](https://jupyter.org/), and the very excellent [Constellate](https://constellate.org/) tutorials. To ensure that you have the base knowledge required for success in this workshop, it is: 
