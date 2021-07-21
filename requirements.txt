@@ -1,0 +1,8 @@
+#pandas==1.1.5
+matplotlib==3.3.3
+contextualSpellCheck==0.4.1
+spacy==2.3.4
+nltk==3.4.4
+sys
+os
+enchant==3.2.1
