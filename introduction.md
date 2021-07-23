@@ -5,7 +5,11 @@ nav_order: 4
 ---
 
 # Introduction
-**Coming soon!**
+
+Follow along with the introductory presentation: 
+
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vREkK-lWK8b0W3-Alnf64ZYRa326ai2Sqpg11OZa82dXyJhdHXapmtMUV2BbsM_pGksT8RhPwx3Dejc/embed?start=false&loop=false&delayms=60000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
 
 <!-- Edit the content below for the workshop in question. Once you're ready to publish, remove the comment characters e.g. "<!--" at the start and end -->
 
