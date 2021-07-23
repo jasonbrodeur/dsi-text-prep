@@ -12,9 +12,10 @@ Follow along with the short presentation on programmatic approaches:
 <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQJu6jqScsgWGoK3XUZI1nml1pGEPNVXlRKpOIgU4sLg_r0HlMjm5asKKPcrPI3RlflpU4hPX2gJVx0/embed?start=false&loop=false&delayms=60000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 
 ## Open your Jupyter Notebook
+Be sure that you've completed (or at least reviewed) the pre-workshop activities on the [Preparation page](preparation#jupyter-notebooks--python). 
+
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jasonbrodeur/dsi-text-prep/HEAD?filepath=python%2Fdsi-text-prep.ipynb)  
 **Click on the binder badge or use [this link](https://bit.ly/dsi-jupyter) to start the interactive tutorial in your own Jupyter Notebook.**
-
 
 ## Basic text prep with Python
 by Alex Provo and Jay Brodeur for [ARL DSI 2021](https://jasonbrodeur.github.io/dsi-text-prep/)
