@@ -6,11 +6,15 @@ nav_order: 6
 
 # Programmatic Approaches with Python
 
+Follow along with the short presentation on programmatic approaches: 
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQJu6jqScsgWGoK3XUZI1nml1pGEPNVXlRKpOIgU4sLg_r0HlMjm5asKKPcrPI3RlflpU4hPX2gJVx0/embed?start=false&loop=false&delayms=60000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+
 **Click on the binder badge or use [this link](https://bit.ly/dsi-jupyter) to start the interactive tutorial in your own Jupyter Notebook.**
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jasonbrodeur/dsi-text-prep/HEAD?filepath=python%2Fdsi-text-prep.ipynb)
 
-# Basic text prep with Python
+## Basic text prep with Python
 by Alex Provo and Jay Brodeur for [ARL DSI 2021](https://jasonbrodeur.github.io/dsi-text-prep/)
 
 In this notebook, we'll run through a few examples that introduce you to text exploration, manipulation, and transformation using Python. The purpose of these exercises is to familiarize you with basic concepts of preparing text in Python, and hopefully, encourage you to explore it a bit more. 
