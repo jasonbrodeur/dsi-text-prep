@@ -17,7 +17,7 @@ Be sure that you've completed (or at least reviewed) the pre-workshop activities
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jasonbrodeur/dsi-text-prep/HEAD?filepath=python%2Fdsi-text-prep.ipynb)  
 **Click on the binder badge or use [this link](https://bit.ly/dsi-jupyter) to start the interactive tutorial in your own Jupyter Notebook.**
 
-## Basic text prep with Python
+# Lesson: Basic text prep with Python
 by Alex Provo and Jay Brodeur for [ARL DSI 2021](https://jasonbrodeur.github.io/dsi-text-prep/)
 
 In this notebook, we'll run through a few examples that introduce you to text exploration, manipulation, and transformation using Python. The purpose of these exercises is to familiarize you with basic concepts of preparing text in Python, and hopefully, encourage you to explore it a bit more. 
@@ -32,10 +32,21 @@ In this exercise, we will continue working with the article by Bernhard Berenson
 
 **Citation:** Berenson, B. (1892). Some Comments on Correggio in Connection with His Pictures in Dresden. The Knight Errant, 1(3), 73-85. doi:10.2307/25515893
   
-Our goals with the text are: 
+Depending on our overall objective with the text (e.g. advanced analysis, dissemination of "clean" text, our objectives may include: 
 * Identify and remove or fix errors--ideally, using repeatable methods that can be used on this text and perhaps many others in the corpus
-* Reduce the words in the text that have little value (very common 'stop words' like 'a', 'an, 'me', 'my', 'myself', 'we', 'our', 'ours', etc.) to improve the information content for analyses
-* Perform some analyses
+* Reduce the words in the text that have little value (very common 'stop words' like 'a', 'an, 'me', 'my', 'myself', 'we', 'our', 'ours', etc.) to improve the information content for analyses. 
+* Perform the desired analyses and/or disseminate the "cleaned up" text. ("cleaned up" is placed within scare quotes here to acknowledge the subjectivity involved in making a value judgment about what is "clean" and what should be "cleaned")
+
+In this exercise, we're going to perform the following tasks: 
+1. Load the data and inspect it for issues that may impact our later work
+1. Tokenize the text into individual words
+1. Identify patterns within these issues that we can use to build repeatable processes to address them
+1. Use patterns and regular expressions to remove recurring errors
+1. Experiment with other modules (such as a spell checker) to assess their utility in preparing our text.
+1. Remove punctuation and convert text to lowercase
+1. Remove stop words
+1. With the NLTK package, begin building a repeatable 'pipeline' for preparing our text
+1. Explore other advanced packages like spaCy and perform Named Entity Recognition analysis.
 
 ## 1. Load and inspect
 First, let's load the file and preview the contents of our file. 
@@ -185,7 +196,7 @@ print("misspelled words: " + str(list(misspelled)))
 
 ```
 
-    misspelled words: ['gallery.', 'ago,', 'sisto', 'now,', 'sixtus', 'pseudo-altar', 'place,', 'lowing.', "correggio's", 'ncrftjh', 'night.', 'dresden.', 'correg']
+    misspelled words: ["correggio's", 'ncrftjh', 'correg', 'gallery.', 'night.', 'place,', 'dresden.', 'ago,', 'sisto', 'now,', 'lowing.', 'sixtus', 'pseudo-altar']
 
 
 What do you notice about the list? It caught some obvious mispellings (like correg, ncrftjh), but has a number of false positives (like 'night.' ,'gallery.', 'ago,')?
@@ -257,13 +268,13 @@ for i in misspelled:
     print("original: " + i + "; suggested: " + spell.correction(i))
 ```
 
-    misspelled words: ['sisto', 'sixtus', 'correggio', 's', 'ncrftjh', 'correg']
-    original: sisto; suggested: visto
-    original: sixtus; suggested: situs
+    misspelled words: ['correggio', 'ncrftjh', 'correg', 'sisto', 's', 'sixtus']
     original: correggio; suggested: correggio
-    original: s; suggested: i
     original: ncrftjh; suggested: ncrftjh
     original: correg; suggested: corre
+    original: sisto; suggested: visto
+    original: s; suggested: i
+    original: sixtus; suggested: situs
 
 
 Some of the false positives are proper nouns like "correggio", "sisto", and "sixtus". We can add these proper nouns to our dictionary, so they are no longer flagged by our spell checker. 
@@ -288,7 +299,7 @@ print("misspelled words: " + str(list(misspelled)))
 
 ```
 
-    misspelled words: ['ncrftjh', 's', 'correg']
+    misspelled words: ['ncrftjh', 'correg', 's']
 
 
 Better! If we had more time, we could explore the rest of the text and make an educated decision whether it was better to keep the misspelled words, or remove them (alongside a few false positives). We could also build a list of proper nouns that could be permanently added to a dictionary we could use for a related corpus.
@@ -446,7 +457,13 @@ from spacy import displacy
 displacy.render(doc,style='ent')
 ```
 
+And here's what it looks like (screenshot to save space):
+
 <img src="assets/img/NER-out.png" alt="Named Entity Recognizer output" width="700" style="border: 1px solid darkgrey">
+
+## 8. Wrap-up
+Although these exercises provided only the most preliminary introduction to text preparation for analysis and dissemination, we hope that it gave you a sense of the broad potential for using programmatic approaches to do so. To explore some next steps, refer to the [Learn More](https://jasonbrodeur.github.io/dsi-text-prep/learn-more.html) section of the workshop website. 
+
 
 <!--
 
