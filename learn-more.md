@@ -35,7 +35,7 @@ nav_order: 7
 - [Cleaning OCR’d text with Regular Expressions](https://programminghistorian.org/en/lessons/cleaning-ocrd-text-with-regular-expressions) by Laura Turner O'Hara for The Programming Historian.
 - [Natural Language Processing With Python's NLTK Package](https://realpython.com/nltk-nlp-python/#getting-text-to-analyze): An excellent end-to-end tutorial using the nltk package
 - [Natural Language Processing with Python: Introduction](https://sanjayasubedi.com.np/nlp/nlp-intro/). This is an excellent step-by-step introduction to basic pre-processing steps (though no clustering or error find/replace)
-
+- [Using Binder to connect GitHub repositories to Jupyter Notebooks](https://github.com/alan-turing-institute/the-turing-way/blob/master/workshops/boost-research-reproducibility-binder/workshop-presentations/zero-to-binder-python.md#1-creating-a-repo-to-binderize)
 
 <!-- Edit the content below for the workshop in question. Once you're ready to publish, remove the comment characters e.g. "<!--" at the start and end -->
 
