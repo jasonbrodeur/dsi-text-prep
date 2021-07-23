@@ -1,9 +1,10 @@
-#pandas==1.1.5
+pandas==1.1.5
 matplotlib==3.3.3
 contextualSpellCheck==0.4.1
 spacy==3.0.0
 nltk==3.4.4
 pyenchant==3.2.1
+# Spacy data models
 https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.0.0/en_core_web_md-3.0.0-py3-none-any.whl 
 https://github.com/explosion/spacy-models/releases/download/en_core_web_md-3.0.0/en_core_web_md-3.0.0.tar.gz
 https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.0.0/en_core_web_sm-3.0.0-py3-none-any.whl 
