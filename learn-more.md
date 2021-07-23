@@ -14,6 +14,7 @@ nav_order: 7
 - Regular expression testers
 	- [https://www.regular-expressions.info/](https://www.regular-expressions.info/)
 	- [https://regex101.com/](https://regex101.com/)
+	- [Regexr](https://regexr.com/): Interactive regular expression (regex) coder and explainer
 
 ## Python
 
@@ -30,7 +31,6 @@ nav_order: 7
 - [How to Clean Text for Machine Learning with Python](https://machinelearningmastery.com/clean-text-machine-learning-python/). An excellent step-by-step walkthrough of the fundamentals of text prep with Python.
 - [Python Regex (Regular Expressions) for Data Scientists](https://www.dataquest.io/blog/regular-expressions-data-scientists/)
 - [Cleaning OCR’d text with Regular Expressions](https://programminghistorian.org/en/lessons/cleaning-ocrd-text-with-regular-expressions) by Laura Turner O'Hara for The Programming Historian.
-- [Regexr](https://regexr.com/): Interactive regular expression (regex) coder and explainer
 - [Python phonetics package](https://pypi.org/project/phonetics/#usage), which includes methods for matching and clustering words by phonetic similarity.
 - [Natural Language Processing With Python's NLTK Package](https://realpython.com/nltk-nlp-python/#getting-text-to-analyze): An excellent end-to-end tutorial using the nltk package
 - [Natural Language Processing with Python: Introduction](https://sanjayasubedi.com.np/nlp/nlp-intro/). This is an excellent step-by-step introduction to basic pre-processing steps (though no clustering or error find/replace)
