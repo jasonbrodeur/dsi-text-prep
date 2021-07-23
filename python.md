@@ -196,7 +196,7 @@ print("misspelled words: " + str(list(misspelled)))
 
 ```
 
-    misspelled words: ["correggio's", 'ncrftjh', 'correg', 'gallery.', 'night.', 'place,', 'dresden.', 'ago,', 'sisto', 'now,', 'lowing.', 'sixtus', 'pseudo-altar']
+    misspelled words: ['sisto', 'ncrftjh', 'lowing.', 'place,', 'sixtus', 'dresden.', "correggio's", 'gallery.', 'ago,', 'now,', 'night.', 'pseudo-altar', 'correg']
 
 
 What do you notice about the list? It caught some obvious mispellings (like correg, ncrftjh), but has a number of false positives (like 'night.' ,'gallery.', 'ago,')?
@@ -268,13 +268,13 @@ for i in misspelled:
     print("original: " + i + "; suggested: " + spell.correction(i))
 ```
 
-    misspelled words: ['correggio', 'ncrftjh', 'correg', 'sisto', 's', 'sixtus']
-    original: correggio; suggested: correggio
-    original: ncrftjh; suggested: ncrftjh
-    original: correg; suggested: corre
+    misspelled words: ['sisto', 'ncrftjh', 'sixtus', 's', 'correggio', 'correg']
     original: sisto; suggested: visto
-    original: s; suggested: i
+    original: ncrftjh; suggested: ncrftjh
     original: sixtus; suggested: situs
+    original: s; suggested: i
+    original: correggio; suggested: correggio
+    original: correg; suggested: corre
 
 
 Some of the false positives are proper nouns like "correggio", "sisto", and "sixtus". We can add these proper nouns to our dictionary, so they are no longer flagged by our spell checker. 
@@ -310,7 +310,9 @@ Better! If we had more time, we could explore the rest of the text and make an e
 
 ```python
 ### import the word tokenizer and stop words from nltk, along with other modules that are required
+import re
 import nltk
+import string
 from nltk import word_tokenize
 from nltk.corpus import stopwords
 nltk.download('stopwords')
@@ -365,12 +367,6 @@ print("\n" + "First 50 words after removing stop words: " + "\n" + str(words[:50
 print("Original number of words: " + str(orig_num_words) + "; Number remaining: " + str(len(words)))
 ```
 
-    [nltk_data] Downloading package stopwords to /home/jovyan/nltk_data...
-    [nltk_data]   Unzipping corpora/stopwords.zip.
-    [nltk_data] Downloading package punkt to /home/jovyan/nltk_data...
-    [nltk_data]   Unzipping tokenizers/punkt.zip.
-
-
     
     First 50 tokens: 
     ['i', '_', 'IPS^S^ffclS', 'OME', 'comments', 'on', 'correg', 'ncRftJH', 'GIO', 'IN', 'CONNECTION', 'with', '1^58^^^', 'HIS', 'PICTURES', 'IN', 'DRESDEN', '.', 'Spl^^T^ES', 'A', 'few', 'years', 'ago', ',', 'it', 'would', 'have', 'been', 'hard', 'u|^J^^fev^S', 'to', 'tell', 'whether', 'Correggio', "'s", 'Night', 'or', 'E^^g^^M', 'Raphael', "'s", 'Madonna', 'Di', 'San', 'Sisto', 'was', 'the', '^L^^^^^M', 'favourite', 'picture', 'of']
@@ -386,6 +382,12 @@ print("Original number of words: " + str(orig_num_words) + "; Number remaining: 
     First 50 words after removing stop words: 
     ['ome', 'comments', 'correg', 'ncrftjh', 'gio', 'connection', 'pictures', 'dresden', 'years', 'ago', 'would', 'hard', 'tell', 'whether', 'correggio', 'night', 'raphael', 'madonna', 'di', 'san', 'sisto', 'favourite', 'picture', 'dresden', 'gallery', 'little', 'sanctuary', 'virgin', 'saint', 'sixtus', 'floats', 'pseudoaltar', 'crowded', 'worshippers', 'correggio', 'picture', 'quite', 'large', 'devout', 'fol', 'lowing', 'change', 'popular', 'taste', 'evidently', 'taken', 'place', 'people', 'linger', 'night']
     Original number of words: 6576; Number remaining: 2805
+
+
+    [nltk_data] Downloading package stopwords to /home/jovyan/nltk_data...
+    [nltk_data]   Package stopwords is already up-to-date!
+    [nltk_data] Downloading package punkt to /home/jovyan/nltk_data...
+    [nltk_data]   Package punkt is already up-to-date!
 
 
 Not bad! This final set is significantly reduced and much more normalized than before. There are still issues with erroneous words, and we would have to make a decision whether to further process the file to remove them, or if our analyses can tolerate a bit of inconsistency. 
@@ -435,7 +437,21 @@ word_counts.most_common(20)
 
 
 
-## 7. A little bit more fun
+## 7. Save your work
+Let's write our winnowed list ```words``` to a comma separated value (CSV) file, so that we can save it and move it to other software, if desired. 
+
+
+```python
+# Use the 'write' 
+with open("word_list.txt", "w") as outfile:
+    outfile.write(",".join(words))
+```
+
+If you are runnign this on your local computer, your file will be saved in your working directory. 
+
+If you are working within a Jupyter Notebook, you can view files by clicking on the Jupyter icon at the top of the notebook. <img src="attachment:image.png" alt="jupyter logo" width="80"/>
+
+## 8. A little bit more fun
 Finally, let's use [spaCy](https://spacy.io/)--another very powerful and full-featured NLP package--to see some of the higher-order analyses that such packages can perform. 
 
 Here, we're going to use our text file to do some Named Entity Recognition (NER).
@@ -461,7 +477,7 @@ And here's what it looks like (screenshot to save space):
 
 <img src="assets/img/NER-out.png" alt="Named Entity Recognizer output" width="700" style="border: 1px solid darkgrey">
 
-## 8. Wrap-up
+## 9. Wrap-up
 Although these exercises provided only the most preliminary introduction to text preparation for analysis and dissemination, we hope that it gave you a sense of the broad potential for using programmatic approaches to do so. To explore some next steps, refer to the [Learn More](https://jasonbrodeur.github.io/dsi-text-prep/learn-more.html) section of the workshop website. 
 
 
