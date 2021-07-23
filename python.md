@@ -2360,7 +2360,3 @@ Although these exercises provided only the most preliminary introduction to text
 </br></br></br></div></span>
 
 -->
-
-## 8. Wrap-up
-Although these exercises provided only the most preliminary introduction to text preparation for analysis and dissemination, we hope that it gave you a sense of the broad potential for using programmatic approaches to do so. To explore some next steps, refer to the [Learn More](https://jasonbrodeur.github.io/dsi-text-prep/learn-more.html) section of the workshop website. 
-
