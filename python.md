@@ -449,7 +449,7 @@ with open("word_list.txt", "w") as outfile:
 
 If you are runnign this on your local computer, your file will be saved in your working directory. 
 
-If you are working within a Jupyter Notebook, you can view files by clicking on the Jupyter icon at the top of the notebook. <img src="attachment:image.png" alt="jupyter logo" width="80"/>
+If you are working within a Jupyter Notebook, you can view files by clicking on the Jupyter icon at the top of the notebook. <img src="assets/img/jupyter_logo.png" alt="jupyter logo" width="80"/>
 
 ## 8. A little bit more fun
 Finally, let's use [spaCy](https://spacy.io/)--another very powerful and full-featured NLP package--to see some of the higher-order analyses that such packages can perform. 
