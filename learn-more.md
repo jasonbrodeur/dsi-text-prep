@@ -6,7 +6,18 @@ nav_order: 7
 
 # Learn More
 
-**Coming soon!**
+## OpenRefine
+
+- [Library Carpentry lesson on OpenRefine](https://librarycarpentry.github.io/lc-open-refine/setup.html)
+- [University of Toronto Libraries OpenRefine tutorials](https://mdl.library.utoronto.ca/tools/openrefine)
+- [OpenRefine Manual on Regular Expressions](https://docs.openrefine.org/manual/expressions#regular-expressions)
+- [Using regular expressions in OpenRefine](https://gist.github.com/pmgreen/6e133c5dcde65762d29c): Tutorial by Peter Green, includes non-Latin script.
+- Regular expression testers
+	- [https://www.regular-expressions.info/](https://www.regular-expressions.info/)
+	- [https://regex101.com/](https://regex101.com/)
+
+
+## Python
 
 <!-- Edit the content below for the workshop in question. Once you're ready to publish, remove the comment characters e.g. "<!--" at the start and end -->
 
