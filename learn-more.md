@@ -25,8 +25,9 @@ nav_order: 7
 - [PyTesseract](https://stackabuse.com/pytesseract-simple-python-optical-character-recognition): Simple Python Optical Character Recognition
 - [spaCy](https://spacy.io/usage/spacy-101/) NLP library and documentation
 - [NLTK](https://www.nltk.org/) NLP library and docmentation
-- [natas](https://pypi.org/project/natas/): Library for  processing historical English corpora, especially for studying neologisms.
-- [Python phonetics package](https://pypi.org/project/phonetics/#usage), which includes methods for matching and clustering words by phonetic similarity.
+- [natas](https://pypi.org/project/natas/): Library for  processing historical English corpora, especially for studying neologisms
+- [Python phonetics package](https://pypi.org/project/phonetics/#usage), which includes methods for matching and clustering words by phonetic similarity
+- [pyspellchecker](https://pyspellchecker.readthedocs.io/en/latest/): A simple Python-based spell checking algorithm
 
 ### Other tutorials and resources
 - [How to Clean Text for Machine Learning with Python](https://machinelearningmastery.com/clean-text-machine-learning-python/). An excellent step-by-step walkthrough of the fundamentals of text prep with Python.
