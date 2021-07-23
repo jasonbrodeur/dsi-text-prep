@@ -6,7 +6,8 @@ nav_order: 6
 
 # Programmatic Approaches with Python
 
-## Click on the binder badge or use [this link](https://bit.ly/dsi-jupyter) to start the interactive tutorial in your own Jupyter Notebook: 
+**Click on the binder badge or use [this link](https://bit.ly/dsi-jupyter) to start the interactive tutorial in your own Jupyter Notebook.**
+
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jasonbrodeur/dsi-text-prep/HEAD?filepath=python%2Fdsi-text-prep.ipynb)
 
 ## Basic text prep with Python
