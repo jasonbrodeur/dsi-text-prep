@@ -443,7 +443,8 @@ from spacy import displacy
 displacy.render(doc,style='ent')
 ```
 
-
+<img src="assets/img/NER-out.png" alt="Named Entity Recognizer output" width="900" style="border: 1px solid darkgrey">
+<!--
 <span class="tex2jax_ignore"><div class="entities" style="line-height: 2.5; direction: ltr"> i _ IPS^S^ffclS 
 <mark class="entity" style="background: #7aecec; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
     OME
@@ -2335,7 +2336,7 @@ displacy.render(doc,style='ent')
     <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; vertical-align: middle; margin-left: 0.5rem">CARDINAL</span>
 </mark>
 </br></br></br></div></span>
-
+-->
 
 ## 8. Wrap-up
 Although these exercises provided only the most preliminary introduction to text preparation for analysis and dissemination, we hope that it gave you a sense of the broad potential for using programmatic approaches to do so. To explore some next steps, refer to the [Learn More](https://jasonbrodeur.github.io/dsi-text-prep/learn-more.html) section of the workshop website. 
