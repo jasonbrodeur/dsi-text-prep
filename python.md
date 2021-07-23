@@ -447,7 +447,9 @@ displacy.render(doc,style='ent')
 ```
 
 <img src="assets/img/NER-out.png" alt="Named Entity Recognizer output" width="700" style="border: 1px solid darkgrey">
+
 <!--
+
 <span class="tex2jax_ignore"><div class="entities" style="line-height: 2.5; direction: ltr"> i _ IPS^S^ffclS 
 <mark class="entity" style="background: #7aecec; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
     OME
@@ -2339,6 +2341,7 @@ displacy.render(doc,style='ent')
     <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; vertical-align: middle; margin-left: 0.5rem">CARDINAL</span>
 </mark>
 </br></br></br></div></span>
+
 -->
 
 ## 8. Wrap-up
