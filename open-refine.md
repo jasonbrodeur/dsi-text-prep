@@ -63,7 +63,7 @@ Such a metadata file might be used by a script to select the text files that wil
 
 Next, let’s talk about manual clean up (for example, of OCR text). Programs like OpenRefine or even Word can be helpful at this stage for actions like find and replace or harmonizing spelling. We’ll also talk about some common actions involved in analyzing text (such as tokenizing or harmonizing capitalization/case). Alternately, for a small corpus, you might correct the text line by line manually.
 
-We’ll now open our next OpenRefine project, `RG_9_8_184_01.draft.en`. This is a Soul of Reason transcript of Dr. Roscoe Brown’s interview with Ed Lewis and Marcia Gillespie ([listen to the interview here](http://hdl.handle.net/2333.1/79cnpcmp)). These next steps are based on an [in-development module from the Sherman Centre for Digital Scholarship] (https://scds.github.io/text-analysis-1/) at McMaster University.
+We’ll now open our next OpenRefine project, `RG_9_8_184_01.draft.en`. This is a Soul of Reason transcript of Dr. Roscoe Brown’s interview with Ed Lewis and Marcia Gillespie ([listen to the interview here](http://hdl.handle.net/2333.1/79cnpcmp)). These next steps are based on an [in-development module from the Sherman Centre for Digital Scholarship](https://scds.github.io/text-analysis-1/) at McMaster University.
 
 #### Tokenizing
 Text analysis often involves “tokenizing” your text in some way -- in other words, breaking up the strings into smaller units. Today, we’ll split up sentences into individual words by splitting the contents of each speaker section on the space character.
