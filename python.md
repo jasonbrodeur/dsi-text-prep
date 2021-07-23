@@ -10,7 +10,7 @@ nav_order: 6
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jasonbrodeur/dsi-text-prep/HEAD?filepath=python%2Fdsi-text-prep.ipynb)
 
-## Basic text prep with Python
+# Basic text prep with Python
 by Alex Provo and Jay Brodeur for [ARL DSI 2021](https://jasonbrodeur.github.io/dsi-text-prep/)
 
 In this notebook, we'll run through a few examples that introduce you to text exploration, manipulation, and transformation using Python. The purpose of these exercises is to familiarize you with basic concepts of preparing text in Python, and hopefully, encourage you to explore it a bit more. 
@@ -420,7 +420,7 @@ word_counts.most_common(20)
 ## 7. A little bit more fun
 Finally, let's use [spaCy](https://spacy.io/)--another very powerful and full-featured NLP package--to see some of the higher-order analyses that such packages can perform. 
 
-Here, we're going to use our text file to do some parts-of-speech tagging
+Here, we're going to use our text file to do some Named Entity Recognition (NER).
 
 
 ```python
@@ -434,7 +434,7 @@ nlp = spacy.load('en_core_web_sm')
 # Run our text against the model
 doc = nlp(text)
 
-# Use the displacy module to display parts of speech
+# Use the displacy module to display named entities
 from spacy import displacy
 displacy.render(doc,style='ent')
 ```
@@ -2335,3 +2335,4 @@ displacy.render(doc,style='ent')
 
 ## 8. Wrap-up
 Although these exercises provided only the most preliminary introduction to text preparation for analysis and dissemination, we hope that it gave you a sense of the broad potential for using programmatic approaches to do so. To explore some next steps, refer to the [Learn More](https://jasonbrodeur.github.io/dsi-text-prep/learn-more.html) section of the workshop website. 
+
