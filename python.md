@@ -9,6 +9,7 @@ nav_order: 6
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/jasonbrodeur/dsi-text-prep/HEAD?filepath=python%2Fdsi-text-prep.ipynb)
 
+https://bit.ly/dsi-jupyter
 
 **Coming Soon!**
 
