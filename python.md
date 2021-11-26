@@ -18,7 +18,6 @@ Be sure that you've completed (or at least reviewed) the pre-workshop activities
 **Click on the binder badge or use [this link](https://bit.ly/dsi-jupyter) to start the interactive tutorial in your own Jupyter Notebook.**
 
 # Lesson: Basic text prep with Python
-by Alex Provo and Jay Brodeur for [ARL DSI 2021](https://jasonbrodeur.github.io/dsi-text-prep/)
 
 In this notebook, we'll run through a few examples that introduce you to text exploration, manipulation, and transformation using Python. The purpose of these exercises is to familiarize you with basic concepts of preparing text in Python, and hopefully, encourage you to explore it a bit more. 
   
